@@ -1,0 +1,17 @@
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Infrastructure.deps.json
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Infrastructure.dll
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Infrastructure.pdb
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Domain.dll
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Domain.pdb
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.AssemblyInfo.cs
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastr.15EFFBFE.Up2Date
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.dll
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/refint/Infrastructure.dll
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.pdb
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/ref/Infrastructure.dll
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Infrastructure.runtimeconfig.json
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.genruntimeconfig.cache

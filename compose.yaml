@@ -1,0 +1,111 @@
+﻿services:
+
+  payment-redis:
+    image: redis:8
+    container_name: payment-redis
+    restart: unless-stopped
+    ports:
+      - "6380:6380"
+    volumes:
+      - payment-redis-data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - payment-network
+      
+  payment-postgres:
+    image: postgres:17-alpine
+    container_name: payment-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "5454:5454"
+    volumes:
+      - payment-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - payment-network
+
+#  pgadmin:
+#    image: dpage/pgadmin4:9
+#    container_name: pgadmin
+#    restart: unless-stopped
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+#      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+#    ports:
+#      - "5050:80"
+#    depends_on:
+#      postgres:
+#        condition: service_healthy
+#    volumes:
+#      - pgadmin-data:/var/lib/pgadmin
+#    networks:
+#      - invoices-network
+
+  payment-rabbitmq:
+    image: rabbitmq:4-management-alpine
+    container_name: payment-rabbitmq
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
+    ports:
+      - "5656:5656"
+      - "15656:15656"
+    volumes:
+      - payment-rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+    networks:
+      - payment-network
+
+#  keycloak:
+#    image: quay.io/keycloak/keycloak:26.3
+#    container_name: keycloak
+#    restart: unless-stopped
+#    command:
+#      - start-dev
+#    depends_on:
+#      postgres:
+#        condition: service_healthy
+#    environment:
+#      KC_DB: postgres
+#      KC_DB_URL_HOST: postgres
+#      KC_DB_URL_PORT: 5432
+#      KC_DB_URL_DATABASE: ${POSTGRES_DB}
+#      KC_DB_USERNAME: ${POSTGRES_USER}
+#      KC_DB_PASSWORD: ${POSTGRES_PASSWORD}
+#
+#      KEYCLOAK_ADMIN: ${KEYCLOAK_ADMIN}
+#      KEYCLOAK_ADMIN_PASSWORD: ${KEYCLOAK_ADMIN_PASSWORD}
+#
+#      KC_HTTP_ENABLED: "true"
+#      KC_PROXY_HEADERS: xforwarded
+#    ports:
+#      - "8888:8080"
+#    networks:
+#      - payment-network
+
+volumes:
+  payment-postgres-data:
+  payment-pgadmin-data:
+  payment-rabbitmq-data:
+  payment-redis-data:
+
+networks:
+  payment-network:
+    driver: bridge
+
+      
+      
+

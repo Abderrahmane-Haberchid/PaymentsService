@@ -1,0 +1,11 @@
+/Users/abderahman/Developer/PaymentService/Domain/bin/Debug/net10.0/Domain.deps.json
+/Users/abderahman/Developer/PaymentService/Domain/bin/Debug/net10.0/Domain.dll
+/Users/abderahman/Developer/PaymentService/Domain/bin/Debug/net10.0/Domain.pdb
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.AssemblyInfoInputs.cache
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.AssemblyInfo.cs
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.csproj.CoreCompileInputs.cache
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.dll
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/refint/Domain.dll
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.pdb
+/Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/ref/Domain.dll
