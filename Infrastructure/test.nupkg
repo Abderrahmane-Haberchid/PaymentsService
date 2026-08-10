@@ -1,0 +1,256 @@
+<html>
+
+<head>
+	<title>File Transfer Blocked - LEONI Web Access</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="PRAGMA" content="NO-CACHE">
+	<meta name="viewport" content="initial-scale=1.0">
+	<link xmlns="http://www.w3.org/1999/xhtml" rel="icon" id="favicon" href="chrome://global/skin/icons/warning.svg" />
+
+	<style>
+		/* ************************ */
+		/* CSS for Web Access Pages */
+		/* ************************ */
+
+		/* General */
+
+		body {
+			padding: 2.5em;
+			background-color: #f7f7f7;
+		}
+
+		div.content {
+			border-radius: 10px;
+			background-color: #fff;
+			box-shadow: 0px 3px 3px 1px lightgrey;
+			margin: 0 auto;
+			font-family: "Segoe UI";
+			font-size: 1em;
+			max-width: 64em;
+		}
+
+		div.messagecontent {
+			padding: 2.5em;
+		}
+
+		div.securitynotice {
+			background-color: #9a1010;
+    		color: #ffffff;
+			padding: 2.5em;
+			border-top-left-radius:10px;
+			border-top-right-radius:10px;
+			display: none;
+		}
+
+		/* Header Area */
+
+		#logoimg {
+			height: 26px;
+			margin-top: 10px;
+			margin-left: 10px;
+			margin-bottom: 10px;
+			float: right;
+		}
+
+		#title {
+			float: left;
+		}
+
+		#title>h1 {
+			font-size: 2em;
+			font-weight: lighter;
+			color: #004089;
+			margin-bottom: .5em;
+			margin-top: 0%;
+			padding-bottom: 0.4em;
+			font-family: "Segoe UI SemiLight", "Segoe UI";
+		}
+
+		/* Main Message Area */
+
+		#message {
+			margin: 1.5em 0px 3em 0px;
+			clear: both;
+		}
+
+		b {
+			font-weight: bold;
+			color: #004089;
+		}
+
+		/* Details Area */
+
+		p.detailsField {
+			word-break: break-all;
+		}
+
+		/* -- Coaching Page only -- */
+
+		/* Progress Bar */
+
+		#myProgress {
+			width: 100%;
+			background-color: #f3f3f3;
+			border-radius: 5px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+
+		#myBar {
+			width: 100%;
+			height: 13px;
+			background-color: #004089;
+			border-radius: 5px;
+		}
+
+		/* Button Area */
+
+		#formdiv {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#backbutton {
+			-webkit-border-radius: 4;
+			-moz-border-radius: 4;
+			border-radius: 4px;
+			font-family: "Segoe UI";
+			color: #004089;
+			border-style: solid;
+			border-width: 1px;
+			border-color: #004089;
+			padding: 8px 18px 8px 18px;
+			margin-right: 15px;
+			background: none;
+			font-weight: bold;
+		}
+
+		#backbutton:hover {
+			background-color: #d4e8ff;
+			transition: all ease 0.3s;
+		}
+
+		input[type=submit] {
+			-webkit-border-radius: 4;
+			-moz-border-radius: 4;
+			border-radius: 4px;
+			font-family: "Segoe UI";
+			color: #ffffff;
+			background: #004089;
+			padding: 10px 20px 10px 20px;
+			border-style: none;
+			text-decoration: none;
+			box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)
+		}
+
+		input[type=submit]:hover:not(#disabled_input) {
+			text-decoration: none;
+			cursor: pointer;
+			background: #0063cc;
+			box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+			transition: all ease 0.3s;
+		}
+
+		form td,
+		form input {
+			font-size: 1em;
+			font-weight: bold;
+		}
+
+		#formtable {
+			height: 100%;
+			width: 100%;
+		}
+
+		#formtd {
+			vertical-align: middle;
+		}
+
+		#login_form {
+			display: inline;
+		}
+	</style>
+
+<script type="text/javascript">
+	function pwdCheck() {
+		if (document.getElementById("pwd")) {
+			document.getElementById("continueText").innerHTML = "If you require access to this page, have an administrator enter the override password here:";
+		}
+	}
+
+	function move() {
+		var elem = document.getElementById("myBar");
+		var width = 100;
+		var id = setInterval(frame, 600);
+		function frame() {
+			if (width <= 0) {
+				clearInterval(id);
+
+				// Timer ran out. Invalidate that continue button!
+				if (document.getElementById("login_form")) {
+
+					var submitbutton = document.getElementById("login_form").children[0]
+					submitbutton.id = "disabled_input"
+					submitbutton.value = "Timed Out"
+					submitbutton.disabled = true
+					submitbutton.style.background = 'darkgrey';
+				}
+			} else {
+				width--;
+				elem.style.width = width + '%';
+			}
+		}
+	}
+
+	function checkos() {
+		var os = (function() {
+		var ua = navigator.userAgent.toLowerCase();
+		return {
+			isWin2K: /windows nt 5.0/.test(ua),
+			isWinXP: /windows nt 5.1/.test(ua),
+			isWinVista: /windows nt 6.0/.test(ua),
+			isWin7: /windows nt 6.1/.test(ua),
+			isWin8: /windows nt 6.2/.test(ua),
+			isWin81: /windows nt 6.3/.test(ua),
+			isWin10: /windows nt 10.0/.test(ua)
+		};
+		}());
+		
+		var secnotice = document.getElementById("securitynotice");
+
+		if(((os.isWinXP) || (os.isWin2K) || (os.isWin7))) {
+    		secnotice.style.display = "block";
+		}else{
+			secnotice.style.display = "none";
+		}
+	}
+
+</script>
+
+</head>
+
+<body onload="checkos();">
+	
+	<div class="content">
+		<div class="securitynotice" id="securitynotice">
+			<a style="font-weight: bold;">Security notice:</a> You are using an unsupported operating system and this represents a security risk.
+		</div>
+		<div class="messagecontent">
+			<img id="logoimg" align="right"
+				src="https://d3gx8i893xzz0e.cloudfront.net/typo3conf/ext/leonisite/Resources/Public/Build/Images/logo-leoni.svg?1476973443"
+				alt="LEONI-Logo"
+			/>
+			
+			<div id="title">
+				<h1>File Download Blocked</h1>
+			</div>
+			<div id="message">
+				<p class="continueText">Access to the file you were trying to download has been blocked.</p>
+				<p class="continueText"><b>Please raise a support ticket in <a href="https://leoniprod.service-now.com/sp" target="_blank" rel="noopener noreferrer">ServiceNow</a> if you believe this is in error.</b></p>
+			</div>
+		<p><b>File:</b> cfb4eb8b-fb9f-4a12-b6f5-0007a9ba2c93 </p>
+		</div>
+	</div>
+</body>
+
+</html>
