@@ -40,11 +40,13 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("PaidAt")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("PaymentMethod")
-                        .HasColumnType("integer");
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.Property<int>("PaymentStatus")
-                        .HasColumnType("integer");
+                    b.Property<string>("PaymentStatus")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("PaymentId");
 

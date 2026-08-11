@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="invoicesservice.shared.contracts" Version="1.4.3" />
       <PackageReference Include="MassTransit" Version="8.5.10" />
       <PackageReference Include="MassTransit.EntityFrameworkCore" Version="8.5.10" />
       <PackageReference Include="MassTransit.RabbitMQ" Version="8.5.10" />
@@ -18,9 +19,12 @@
       </PackageReference>
       <PackageReference Include="Microsoft.IdentityModel.Abstractions" Version="8.22.0" />
       <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="10.2.3" />
+      <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="10.2.3" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Application\Application.csproj" />
       <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>
 

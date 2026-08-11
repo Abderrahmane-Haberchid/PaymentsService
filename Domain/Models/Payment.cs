@@ -33,4 +33,22 @@ public class Payment
         
         return new Payment(customerId, amount, paymentMethod, PaymentStatus.WAITING, invoiceId);
     }
+
+    public Payment Pay(Guid invoiceId, PaymentMethod paymentMethod)
+    {
+        if (PaymentStatus == PaymentStatus.PAID)
+        {
+            throw new InvoiceAlreadyPaidException("This invoice has already been paid!");
+        }
+
+        if (InvoiceId == Guid.Empty)
+        {
+            throw new InvalidPaymentDataException("Please make sur InvoiceId is not empty!");
+        }
+
+        PaymentStatus = PaymentStatus.PAID;
+        PaymentMethod = paymentMethod;
+
+        return this;
+    }
 }

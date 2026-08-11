@@ -15,3 +15,6 @@
 /Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/ref/Infrastructure.dll
 /Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Infrastructure.runtimeconfig.json
 /Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.genruntimeconfig.cache
+/Users/abderahman/Developer/PaymentService/Infrastructure/obj/Debug/net10.0/Infrastructure.sourcelink.json
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Application.dll
+/Users/abderahman/Developer/PaymentService/Infrastructure/bin/Debug/net10.0/Application.pdb

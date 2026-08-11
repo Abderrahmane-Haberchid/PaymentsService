@@ -1,5 +1,8 @@
+using Application.Abstractions;
+using Domain.Respository;
 using Infrastructure.Consumers;
 using Infrastructure.Persistance;
+using Infrastructure.Producer;
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -12,11 +15,17 @@ public static class DependencyInjection
 
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+
+        services.AddScoped<IEventPublisher, EventPublisher>();
+        
+        services.AddScoped<IPaymentRepository, PaymentRepository>();
+        
+        var connectionString = configuration.GetConnectionString("DefaultConnection");
+        
         services.AddDbContext<AppDbContext>(options =>
         {
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
+            options.UseNpgsql(connectionString);
         });
-        Console.WriteLine("Startinng masstransit configuration...");
 
         services.AddMassTransit(busConfiguration =>
         {
@@ -35,7 +44,6 @@ public static class DependencyInjection
             {
                 var host = configuration["RabbitMQ:Host"];
                 var port = configuration["RabbitMQ:Port"];
-                Console.WriteLine($"Configuring RabbitMQ at {host}:{port}");
                 
                 cfg.Host(host, 
                     ushort.Parse(port!),
@@ -48,8 +56,6 @@ public static class DependencyInjection
         
                 cfg.UseMessageRetry(r => r.Interval(3, TimeSpan.FromSeconds(5)));
                 cfg.ConfigureEndpoints(context);
-                
-                Console.WriteLine("MassTransit endpoints configured.");
             });
         });
 
