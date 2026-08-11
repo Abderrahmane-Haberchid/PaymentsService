@@ -10,3 +10,15 @@
 /Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.pdb
 /Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/ref/Domain.dll
 /Users/abderahman/Developer/PaymentService/Domain/obj/Debug/net10.0/Domain.sourcelink.json
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\bin\Debug\net10.0\Domain.deps.json
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\bin\Debug\net10.0\Domain.dll
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\bin\Debug\net10.0\Domain.pdb
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.AssemblyInfoInputs.cache
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.AssemblyInfo.cs
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.sourcelink.json
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.dll
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\refint\Domain.dll
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\Domain.pdb
+C:\Users\haab5015\RiderProjects\PaymentsService\Domain\obj\Debug\net10.0\ref\Domain.dll

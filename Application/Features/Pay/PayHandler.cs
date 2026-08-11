@@ -21,15 +21,15 @@ public class PayHandler(
         
         payment.Pay(request.PaymentId, request.PaymentMethod);
 
-        await paymentRepository.SaveChangesAsync(cancellationToken);
-
-        await eventPublisher.PublishPaymentEvent<PaymentDoneEvent>(new PaymentDoneEvent
+        await eventPublisher.PublishPaymentEvent(new PaymentDoneEvent
         {
             PaymentId = payment.PaymentId,
             InvoiceId = payment.InvoiceId,
             PaidAt = payment.PaidAt,
             Total = payment.Amount
         }, cancellationToken);
+        
+        await paymentRepository.SaveChangesAsync(cancellationToken);
 
         return new PayResponse(
             payment.PaymentId,

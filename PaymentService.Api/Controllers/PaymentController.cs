@@ -28,8 +28,8 @@ public class PaymentController(
         return Ok(response);
     }
 
-    [HttpGet("{pageSize:int}&{pageNumber:int}")]
-    public async Task<IActionResult> GetAll(int pageSize, int pageNumber)
+    [HttpGet]
+    public async Task<IActionResult> GetAll(int pageSize = 50, int pageNumber = 1)
     {
         var query = new GetPaymentsQuery(pageSize, pageNumber);
         var result = await sender.Send(query);
