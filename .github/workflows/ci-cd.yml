@@ -1,17 +1,21 @@
 name: ci-cd.yml
 on:
-  pull_request: 
+  pull_request:
     branches:
       - master
   push:
     branches:
       - master
-  
-env: 
+
+permissions:
+  contents: write
+  packages: write
+
+env:
   DOTNET_VERSION: "10.0.*"
   REGISTRY: ghcr.io
-  IMAGE_NAME: {{ github.repository }}/payments
-    
+  IMAGE_NAME: { { github.repository } }/payments
+
 jobs:
   
   # ============================================================
@@ -19,41 +23,41 @@ jobs:
   # ============================================================
   
   buid-test:
-   name: Buid and Test
-   runs-on: ubuntu-22.04
-   
-   steps:
-     - name: Checkout
-       uses: actions/checkout@v4
-     
-     - name: Setup .NET env
-       uses: actions/setup-dotnet@v4
-       with:
-         dotnet-version: {{ env.DOTNET_VERSION }}
-       
-     - name: Restore packages
-       run: dotnet restore
-     
-     - name: Build project
-       run: dotnet build --no-restore --configuration Release
-     
-     - name: Unit Tests
-       run: |
-         dotnet test \
-          --no-build
-          --configuration Release \
-          --filter "Category=Unit" \
-          --logger "trx;LogFileName=unit-tests-payments.trx"
-         
-     - name: Integration Test
-       run: |
-         dotnet test \
-          --no-build \
-          ---configuration Release
-          --filter "Category=Integration"
-          --logger "trx;LogFileName=integration-tests-payments.trx"
-              
-  
+    name: Buid and Test
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET env
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: { { env.DOTNET_VERSION } }
+
+      - name: Restore packages
+        run: dotnet restore
+
+      - name: Build project
+        run: dotnet build --no-restore --configuration Release
+
+      - name: Unit Tests
+        run: |
+          dotnet test \
+           --no-build
+           --configuration Release \
+           --filter "Category=Unit" \
+           --logger "trx;LogFileName=unit-tests-payments.trx"
+
+      - name: Integration Test
+        run: |
+          dotnet test \
+           --no-build \
+           ---configuration Release
+           --filter "Category=Integration"
+           --logger "trx;LogFileName=integration-tests-payments.trx"
+
+
 #  quality:
 #    
 #  image-validation:

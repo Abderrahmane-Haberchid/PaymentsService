@@ -42,7 +42,7 @@ public class Payment
             throw new InvoiceAlreadyPaidException("This invoice has already been paid!");
         }
 
-        if (InvoiceId == Guid.Empty)
+        if (invoiceId == Guid.Empty)
         {
             throw new InvalidPaymentDataException("Please make sur InvoiceId is not empty!");
         }
