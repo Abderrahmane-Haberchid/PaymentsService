@@ -17,5 +17,8 @@ public class PaymentConfiguration : IEntityTypeConfiguration<Payment>
         
         builder.Property(x => x.PaymentStatus)
             .HasConversion<string>();
+
+        builder.Property(x => x.Version)
+            .IsConcurrencyToken();
     }
 }

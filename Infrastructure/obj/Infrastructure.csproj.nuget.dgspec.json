@@ -1,41 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Infrastructure\\Infrastructure.csproj": {}
+    "/Users/abderahman/Developer/PaymentService/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Application\\Application.csproj": {
+    "/Users/abderahman/Developer/PaymentService/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Application\\Application.csproj",
+        "projectUniqueName": "/Users/abderahman/Developer/PaymentService/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\haab5015\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Application\\obj\\",
+        "projectPath": "/Users/abderahman/Developer/PaymentService/Application/Application.csproj",
+        "packagesPath": "/Users/abderahman/.nuget/packages/",
+        "outputPath": "/Users/abderahman/Developer/PaymentService/Application/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\NuGet.Config",
-          "C:\\Users\\haab5015\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/abderahman/Developer/PaymentService/NuGet.Config",
+          "/Users/abderahman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/abderrahmane-haberchid/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj"
+              "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj": {
+                "projectPath": "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj"
               }
             }
           }
@@ -50,10 +45,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "FluentValidation": {
@@ -89,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -367,34 +363,29 @@
         }
       }
     },
-    "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj": {
+    "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj",
+        "projectUniqueName": "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\haab5015\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\obj\\",
+        "projectPath": "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj",
+        "packagesPath": "/Users/abderahman/.nuget/packages/",
+        "outputPath": "/Users/abderahman/Developer/PaymentService/Domain/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\NuGet.Config",
-          "C:\\Users\\haab5015\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/abderahman/Developer/PaymentService/NuGet.Config",
+          "/Users/abderahman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/abderrahmane-haberchid/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -409,10 +400,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -430,7 +422,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -708,41 +700,36 @@
         }
       }
     },
-    "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Infrastructure\\Infrastructure.csproj": {
+    "/Users/abderahman/Developer/PaymentService/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "/Users/abderahman/Developer/PaymentService/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\haab5015\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Infrastructure\\obj\\",
+        "projectPath": "/Users/abderahman/Developer/PaymentService/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/Users/abderahman/.nuget/packages/",
+        "outputPath": "/Users/abderahman/Developer/PaymentService/Infrastructure/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\NuGet.Config",
-          "C:\\Users\\haab5015\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/abderahman/Developer/PaymentService/NuGet.Config",
+          "/Users/abderahman/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://nuget.pkg.github.com/abderrahmane-haberchid/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Application\\Application.csproj"
+              "/Users/abderahman/Developer/PaymentService/Application/Application.csproj": {
+                "projectPath": "/Users/abderahman/Developer/PaymentService/Application/Application.csproj"
               },
-              "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\haab5015\\RiderProjects\\PaymentsService\\Domain\\Domain.csproj"
+              "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj": {
+                "projectPath": "/Users/abderahman/Developer/PaymentService/Domain/Domain.csproj"
               }
             }
           }
@@ -757,10 +744,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "MassTransit": {
@@ -822,7 +810,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.302/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

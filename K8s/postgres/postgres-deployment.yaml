@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: payments-ns
+  labels:
+    app: postgres
+    
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-postgres
+      
+  template:
+    metadata:
+      name: payment-postgres
+      labels:
+        app: payment-postgres
+        
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:15-alpine
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data-payments
+              name: pg-volume-payments
+          
+          envFrom:
+            - secretRef:
+                name: postgres-secrets
+        
+      volumes:
+        - name: pg-volume-payments
+          emptyDir: {}
+          
+      restartPolicy: Always
+      

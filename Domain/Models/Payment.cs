@@ -12,6 +12,7 @@ public class Payment
     public PaymentStatus PaymentStatus { get; private set; }
     public Guid InvoiceId { get; private set; }
     public DateTime PaidAt { get; private set; }
+    public Guid Version { get; private set; }
     
     private Payment() { }
 
